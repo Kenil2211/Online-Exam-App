@@ -1,0 +1,19 @@
+file uploading
+
+material UI
+
+node excel read data
+
+DYNAMIC SCHEMA
+
+REDUX  AND CONTEXT(REVISE)
+
+Auth---> ADmin (organizations) can create users and allow access management
+
+WeB - Scraping for 
+
+BADGES for achievements of users.
+
+LeaderBoard--> used in Competitions
+
+Compiler integration----Example for Coding Test (New concept).

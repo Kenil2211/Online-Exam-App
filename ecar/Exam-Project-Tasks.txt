@@ -1,0 +1,14 @@
+exam history 
+
+only active exams
+
+exams search using material table
+
+one user - one exam -one attempt only
+
+admin can create custom exams ---custom [questions,timeLimit]
+
+read CSV [ques,options,correctAnswer] and create exams.----------->DONE
+
+subject schema --->sub subject-->topic
+ex:  Natural Science---Biology --plant related
