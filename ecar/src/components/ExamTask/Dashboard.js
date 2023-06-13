@@ -14,8 +14,8 @@ export const Dashboard = () => {
         <div>
             <h1 style={{alignItems:'center'}}>
                 Dashboard
-            
             </h1>
+            
              
             <header>
                  
@@ -33,9 +33,9 @@ export const Dashboard = () => {
                             <a href="/newexam" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
                                 <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Create Exam</span>
                             </a>    
-                            <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i
+                            <a href="/profile" class="list-group-item list-group-item-action py-2 ripple"><i
                                 class="fas fa-chart-line fa-fw me-3"></i><span>Profile</span></a>
-                            <a href="#" class="list-group-item list-group-item-action py-2 ripple">
+                            <a href="/setting" class="list-group-item list-group-item-action py-2 ripple">
                                 <i class="fas fa-chart-pie fa-fw me-3"></i><span>Settings</span>
                             </a>
                             

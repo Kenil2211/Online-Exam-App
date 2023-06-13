@@ -28,6 +28,11 @@ import { Questions_M } from './components/ExamTask/Questions_M';
 import { CreateExam } from './components/ExamTask/CreateExam';
 import { Questions_F } from './components/ExamTask/Questions_F';
 import { DependentDopDown } from './components/DependentDopDown';
+import { ViewPastExam1 } from './components/ExamTask/ViewPastExam1';
+import { Profile } from './components/ExamTask/Profile';
+import { Settings } from './components/ExamTask/Settings';
+import { CreateExam1 } from './components/ExamTask/CreateExam1';
+import { Questions_F1 } from './components/ExamTask/Questions_F1';
 
 function App() {
   return (
@@ -44,18 +49,24 @@ function App() {
       <Routes>
 
         <Route element={<ProtectedRoutes />} >
+          <Route path='/' element={<Dashboard />} />
 
-        <Route path='/' element={<Dashboard />} />
-        <Route path='/student' element={<Dashboard />} />
-        <Route path='/getexams' element={<Exam />} />
+
+
+          {/* <Route path='/student' element={<Dashboard />} /> */}
+
+          <Route path='/getexams' element={<Exam />} />
           <Route path='/exam/:id' element={<AttemptExam1 />} />
           <Route path='/examscore/:id' element={<ExamScore />} />
           <Route path='/myexams' element={<MyExams />} />
           <Route path='/newexam' element={<CreateExam />} />
           <Route path='/questions/manual/:ename' element={<Questions_M />} />
           <Route path='/questions/file/:ename' element={<Questions_F />} />
-
+          <Route path='/exam/history/:eid' element={<ViewPastExam1/>} />
+          <Route path='/profile' element={<Profile/> }/>
+          <Route path='/setting' element={<Settings/> }/>
         </Route>
+
 
 
         {/* <UserDashboard /> */}
@@ -65,14 +76,14 @@ function App() {
 
 
 
-      
-          {/* <Route path='/' element={<Home />} />
+
+        {/* <Route path='/' element={<Home />} />
           <Route path='/contact' element={<ContactUs />} />
           <Route path='/about' element={<AboutUs />} />
           <Route path='/contact/manager' element={<Manager />} />
           <Route path='/addnewuser' element={<AddUser />} />
           <Route path='/updateuser/:id' element={<UpdateUser />} /> */}
-       
+
 
 
 

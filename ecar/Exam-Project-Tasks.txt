@@ -12,3 +12,9 @@ read CSV [ques,options,correctAnswer] and create exams.----------->DONE
 
 subject schema --->sub subject-->topic
 ex:  Natural Science---Biology --plant related
+
+Get specific fields in response (using select in node)
+
+ADD A ENV FILE AND USE IT..
+
+UPLOAD FILE OF QUESTIONS AND THEN HAVE TO RELOAD PAGE TO SEE CHANGES ??(WHY)!!

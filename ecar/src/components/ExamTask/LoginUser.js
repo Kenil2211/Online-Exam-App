@@ -18,6 +18,7 @@ export const LoginUser = () => {
             "password":Object.values(data)[1]
         }
         axios.post('http://localhost:3001/examuser/validuser',tmp).then((res)=>{
+            console.log("")
             if(res.data.data)
             {
                 console.log('res.data.data.role-',res.data.data.role)
@@ -27,6 +28,8 @@ export const LoginUser = () => {
                 localStorage.setItem("uid", res.data.data._id);
 
             }
+            console.log("before navigate...")
+            console.log("after..")
         })
     }
 

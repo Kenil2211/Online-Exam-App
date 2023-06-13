@@ -22,10 +22,9 @@ export const AttemptExam1 = () => {
             console.log('--->', res.data.data.questions)
             setquestions(res.data.data.questions)
         })
-
-
     }
 
+    
     const submit = async (answers) => {
         toast.success('Exam Submitted Successfully!!', {
             position: "top-left",
@@ -74,7 +73,7 @@ export const AttemptExam1 = () => {
             answers1.push(examData)
         })
         var examData1 = {
-            uid: "63b1c79c881bd05b9c192b5b",
+            uid: localStorage.getItem("uid"),
             eid: eid,
             answers: answers1
         }
@@ -82,7 +81,7 @@ export const AttemptExam1 = () => {
         console.log("===", examData1)
 
         await axios.post(`http://localhost:3001/examhistory/addexam`, examData1).then((res) => {
-            console.log('res', res.status)
+            console.log('history', res.data)
         })
 
         setTimeout(() => {

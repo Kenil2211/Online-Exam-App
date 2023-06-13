@@ -4,22 +4,32 @@ import { Link } from 'react-router-dom'
 
 export const Exam = () => {
 
+    const uid = localStorage.getItem('uid')
+
+    const [attempFlag, setattempFlag] = useState(false)
     const [exams, setexams] = useState([])
+    const [attemptedExamsId, setattemptedExamsId] = useState([])
 
 
     const getExams = () => {
         axios.get('http://localhost:3001/exam/getallexams').then((res) => {
+            console.log('exams ', res.data.data)
             setexams(res.data.data)
         })
     }
 
-    const displayTest = (id) => {
-        alert(id)
+    const attemptedExams = () => {
+        axios.get(`http://localhost:3001/examresult/getresults/${uid}`).then((res) => {
+
+            console.log("attempted exam id ==", res.data.data[0].exam)
+            // setattemptedExamsId(res.data.data[0].exam)
+        })
     }
 
     useEffect(() => {
         getExams()
 
+        attemptedExams()
     }, [])
 
 
@@ -43,9 +53,11 @@ export const Exam = () => {
                                 <td>{e.name}</td>
                                 <td>{e.questions.length}</td>
                                 <td>
-                                    <Link to={`/exam/${e._id}`} className='btn btn-primary' >
-                                        Attempt
-                                    </Link>
+                                    <button className='btn btn-primary'>
+                                        <Link to={`/exam/${e._id}`} style={{color:'white'}} >
+                                            Attempt
+                                        </Link>
+                                    </button>
                                 </td>
                             </tr>
                         )
